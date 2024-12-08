@@ -19,9 +19,13 @@
 :r $(path)\dbo\Functions\Table\RowLevelSecurity.sql
 :r $(path)\dbo\Functions\Scalar\CUDSecurity.sql
 :r $(path)\Security\Policies\dbo\RowLevelSecurityBranchOffice.sql
+:r $(path)\Security\Policies\dbo\RowLevelSecurityCostCenter.sql
 :r $(path)\dbo\Triggers\IDBranchOffice.sql
 :r $(path)\dbo\Triggers\IIBranchOffice.sql
 :r $(path)\dbo\Triggers\IUBranchOffice.sql
+:r $(path)\dbo\Triggers\IDCostCenter.sql
+:r $(path)\dbo\Triggers\IICostCenter.sql
+:r $(path)\dbo\Triggers\IUCostCenter.sql
 :r $(path)\dbo\Data\Company.sql
 :r $(path)\dbo\Data\BranchOffice.sql
 :r $(path)\dbo\Data\CostCenter.sql

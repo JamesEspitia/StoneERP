@@ -38,10 +38,17 @@ VALUES
 	(4, 4, 4, 2, 0, NULL),
 	(5, 5, 5, 2, 1, NULL),
 	(6, 6, 6, 2, 0, NULL),
-	(7, 7, 7, 2, 1, NULL);
+	(7, 7, 7, 2, 1, NULL),
+	(8, 1, 1, 3, 1, NULL),
+	(9, 2, 2, 3, 0, NULL),
+	(10, 3, 3, 3, 1, NULL),
+	(11, 4, 4, 3, 0, NULL),
+	(12, 5, 5, 3, 1, NULL),
+	(13, 6, 6, 3, 0, NULL),
+	(14, 7, 7, 3, 1, NULL);
 GO
 
-DBCC CHECKIDENT ('[dbo].[PermiRole]', RESEED, 7);
+DBCC CHECKIDENT ('[dbo].[PermiRole]', RESEED, 14);
 GO
 
 SET IDENTITY_INSERT [dbo].[PermiRole] OFF;

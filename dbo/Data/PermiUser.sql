@@ -37,10 +37,17 @@ VALUES
 	(4, 4, 4, 2, 1),
 	(5, 5, 5, 2, 0),
 	(6, 6, 6, 2, 1),
-	(7, 7, 7, 2, 0);
+	(7, 7, 7, 2, 0),
+	(8, 1, 1, 3, 0),
+	(9, 2, 2, 3, 1),
+	(10, 3, 3, 3, 0),
+	(11, 4, 4, 3, 1),
+	(12, 5, 5, 3, 0),
+	(13, 6, 6, 3, 1),
+	(14, 7, 7, 3, 0);
 GO
 
-DBCC CHECKIDENT ('[dbo].[PermiUser]', RESEED, 7);
+DBCC CHECKIDENT ('[dbo].[PermiUser]', RESEED, 14);
 GO
 
 SET IDENTITY_INSERT [dbo].[PermiUser] OFF;

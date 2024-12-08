@@ -37,6 +37,9 @@ StoneERP
 │   │   │   IDBranchOffice.sql
 │   │   │   IIBranchOffice.sql
 │   │   │   IUBranchOffice.sql
+│   │   │   IDCostCenter.sql
+│   │   │   IICostCenter.sql
+│   │   │   IUCostCenter.sql
 │   │   │   ...
 │   │   └
 │   │   ...
@@ -65,6 +68,7 @@ StoneERP
 │   └───Policies
 │   │   └───dbo
 │   │   │   │   RowLevelSecurityBranchOffice.sql
+│   │   │   │   RowLevelSecurityCostCenter.sql
 │   │   │   │   ...
 │   │   │   └
 │   │   │   ...
@@ -149,17 +153,14 @@ Para cada mejora debe abrir una rama nueva en el repositorio.
 1. Crear el desencadenador "dbo"."IDCompany"
 2. Crear el desencadenador "dbo"."IICompany"
 3. Crear el desencadenador "dbo"."IUCompany"
-4. Crear el desencadenador "dbo"."IDCostCenter"
-5. Crear el desencadenador "dbo"."IICostCenter"
-6. Crear el desencadenador "dbo"."IUCostCenter"
-7. Crear el desencadenador "dbo"."IDEntityCatalog"
-8. Crear el desencadenador "dbo"."IIEntityCatalog"
-9. Crear el desencadenador "dbo"."IUEntityCatalog"
-10. Crear los demás escenarios de las pruebas automatizadas de la función  "dbo"."RowLevelSecurity"
-11. Crear las pruebas automatizadas de la función  "dbo"."CUDSecurity"
-12. Crear las pruebas automatizadas del desencadenador "dbo"."IDBranchOffice"
-13. Crear las pruebas automatizadas del desencadenador "dbo"."IIBranchOffice"
-14. Crear las pruebas automatizadas del desencadenador "dbo"."IUBranchOffice"
+4. Crear el desencadenador "dbo"."IDEntityCatalog"
+5. Crear el desencadenador "dbo"."IIEntityCatalog"
+6. Crear el desencadenador "dbo"."IUEntityCatalog"
+7. Crear los demás escenarios de las pruebas automatizadas de la función  "dbo"."RowLevelSecurity"
+8. Crear las pruebas automatizadas de la función  "dbo"."CUDSecurity"
+9. Crear las pruebas automatizadas del desencadenador "dbo"."IDBranchOffice"
+10. Crear las pruebas automatizadas del desencadenador "dbo"."IIBranchOffice"
+11. Crear las pruebas automatizadas del desencadenador "dbo"."IUBranchOffice"
 12. Crear las pruebas automatizadas del desencadenador "dbo"."IDCompany"
 13. Crear las pruebas automatizadas del desencadenador "dbo"."IICompany"
 14. Crear las pruebas automatizadas del desencadenador "dbo"."IUCompany"

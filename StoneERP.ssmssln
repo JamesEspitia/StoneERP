@@ -5,15 +5,150 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "StoneERP", "StoneERP.ssmssqlproj", "{119F2D38-8B07-450C-A0F8-5F481C60CED2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dbo", "dbo", "{FF26E177-F088-49F2-8FEF-947759A019B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6663CD90-7A54-4213-AFF6-14B3ACB90CD2}"
+	ProjectSection(SolutionItems) = preProject
+		dbo\Data\BranchOffice.sql = dbo\Data\BranchOffice.sql
+		dbo\Data\Company.sql = dbo\Data\Company.sql
+		dbo\Data\CostCenter.sql = dbo\Data\CostCenter.sql
+		dbo\Data\EntityCatalog.sql = dbo\Data\EntityCatalog.sql
+		dbo\Data\PermiRole.sql = dbo\Data\PermiRole.sql
+		dbo\Data\PermiRoleRecord.sql = dbo\Data\PermiRoleRecord.sql
+		dbo\Data\Permission.sql = dbo\Data\Permission.sql
+		dbo\Data\PermiUser.sql = dbo\Data\PermiUser.sql
+		dbo\Data\PermiUserRecord.sql = dbo\Data\PermiUserRecord.sql
+		dbo\Data\Role.sql = dbo\Data\Role.sql
+		dbo\Data\User.sql = dbo\Data\User.sql
+		dbo\Data\UserCompany.sql = dbo\Data\UserCompany.sql
+		dbo\Data\UserRole.sql = dbo\Data\UserRole.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functions", "Functions", "{81A99C5C-0E7C-4C24-B8AC-E21AC13FEA47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Triggers", "Triggers", "{D7AA4F7B-984C-4D73-A8B0-27022ADE7C53}"
+	ProjectSection(SolutionItems) = preProject
+		dbo\Triggers\IDBranchOffice.sql = dbo\Triggers\IDBranchOffice.sql
+		dbo\Triggers\IDCostCenter.sql = dbo\Triggers\IDCostCenter.sql
+		dbo\Triggers\IIBranchOffice.sql = dbo\Triggers\IIBranchOffice.sql
+		dbo\Triggers\IICostCenter.sql = dbo\Triggers\IICostCenter.sql
+		dbo\Triggers\IUBranchOffice.sql = dbo\Triggers\IUBranchOffice.sql
+		dbo\Triggers\IUCostCenter.sql = dbo\Triggers\IUCostCenter.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scalar", "Scalar", "{A4FDA7F1-08A7-493B-A9F8-1F1930B0E6AE}"
+	ProjectSection(SolutionItems) = preProject
+		dbo\Functions\Scalar\CUDSecurity.sql = dbo\Functions\Scalar\CUDSecurity.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Table", "Table", "{C03AFAC2-E5B5-4D58-8F28-5DA282D87EA4}"
+	ProjectSection(SolutionItems) = preProject
+		dbo\Functions\Table\RowLevelSecurity.sql = dbo\Functions\Table\RowLevelSecurity.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts_para_crear_tablas", "scripts_para_crear_tablas", "{AE213FBF-E2E1-48A3-93CE-51315282B5B8}"
+	ProjectSection(SolutionItems) = preProject
+		scripts_para_crear_tablas\branch_office.sql = scripts_para_crear_tablas\branch_office.sql
+		scripts_para_crear_tablas\company.sql = scripts_para_crear_tablas\company.sql
+		scripts_para_crear_tablas\cost_center.sql = scripts_para_crear_tablas\cost_center.sql
+		scripts_para_crear_tablas\entity_catalog.sql = scripts_para_crear_tablas\entity_catalog.sql
+		scripts_para_crear_tablas\permi_role.sql = scripts_para_crear_tablas\permi_role.sql
+		scripts_para_crear_tablas\permi_role_record.sql = scripts_para_crear_tablas\permi_role_record.sql
+		scripts_para_crear_tablas\permi_user.sql = scripts_para_crear_tablas\permi_user.sql
+		scripts_para_crear_tablas\permi_user_record.sql = scripts_para_crear_tablas\permi_user_record.sql
+		scripts_para_crear_tablas\permission.sql = scripts_para_crear_tablas\permission.sql
+		scripts_para_crear_tablas\role.sql = scripts_para_crear_tablas\role.sql
+		scripts_para_crear_tablas\user.sql = scripts_para_crear_tablas\user.sql
+		scripts_para_crear_tablas\user_company.sql = scripts_para_crear_tablas\user_company.sql
+		scripts_para_crear_tablas\UserRole.sql = scripts_para_crear_tablas\UserRole.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{668B0DDD-B6B3-4823-A1C2-9A54A3A4BFC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logins", "Logins", "{27CB2F73-050A-41D3-9891-F362389FF09B}"
+	ProjectSection(SolutionItems) = preProject
+		Security\Logins\TestUser.sql = Security\Logins\TestUser.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Policies", "Policies", "{431C2F31-4728-4C4F-8C3D-7C788AB24316}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{BD9912DC-1362-4548-A439-58CC9F0750E3}"
+	ProjectSection(SolutionItems) = preProject
+		Security\Schemas\History.sql = Security\Schemas\History.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{A62B9D43-3333-4CEA-AD71-D7358D30C85F}"
+	ProjectSection(SolutionItems) = preProject
+		Security\Users\TestUser.sql = Security\Users\TestUser.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sys", "sys", "{4A7C33D7-D62E-4DE1-89BE-27196B485BC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{51BD0D16-B28A-4E17-931D-5665367C9269}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "messages", "messages", "{B7A2AC83-BF21-4C32-927B-6C4F56D7F929}"
+	ProjectSection(SolutionItems) = preProject
+		sys\Views\messages\51001.sql = sys\Views\messages\51001.sql
+		sys\Views\messages\51002.sql = sys\Views\messages\51002.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D6B200B8-5353-4EDE-8A96-6D5C95ED0823}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dbo", "dbo", "{518D8DC0-5369-4A5B-A609-E271102E02A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functions", "Functions", "{FA286088-D0F6-4FB5-B4A6-592ED9C313C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Table", "Table", "{B5B36887-864A-4B6F-AD64-7ABF357D09AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RowLevelSecurity", "RowLevelSecurity", "{8C458FE5-6FAF-44D3-B208-52A2DE4A25F5}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\dbo\Functions\Table\RowLevelSecurity\testRowLevelSecurity.sql = Tests\dbo\Functions\Table\RowLevelSecurity\testRowLevelSecurity.sql
+		Tests\dbo\Functions\Table\RowLevelSecurity\testRowLevelSecurityUserIsAdmin.sql = Tests\dbo\Functions\Table\RowLevelSecurity\testRowLevelSecurityUserIsAdmin.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Versions", "Versions", "{6149EE5E-6C0B-4DFB-9979-5A8386D82D6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.00.00", "00.00.00", "{0B53C2FA-AE39-4D34-963C-B31F7E24603A}"
+	ProjectSection(SolutionItems) = preProject
+		Versions\00.00.00\Database.sql = Versions\00.00.00\Database.sql
+		Versions\00.00.00\Main.sql = Versions\00.00.00\Main.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dbo", "dbo", "{6B68FC32-F8EF-40BD-A119-8A055ABAA8F8}"
+	ProjectSection(SolutionItems) = preProject
+		Security\Policies\dbo\RowLevelSecurityBranchOffice.sql = Security\Policies\dbo\RowLevelSecurityBranchOffice.sql
+		Security\Policies\dbo\RowLevelSecurityCostCenter.sql = Security\Policies\dbo\RowLevelSecurityCostCenter.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{119F2D38-8B07-450C-A0F8-5F481C60CED2}.Default|Default.ActiveCfg = Default
+		{70FA476C-21CB-46E9-9942-79BF47425D0C}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6663CD90-7A54-4213-AFF6-14B3ACB90CD2} = {FF26E177-F088-49F2-8FEF-947759A019B4}
+		{81A99C5C-0E7C-4C24-B8AC-E21AC13FEA47} = {FF26E177-F088-49F2-8FEF-947759A019B4}
+		{D7AA4F7B-984C-4D73-A8B0-27022ADE7C53} = {FF26E177-F088-49F2-8FEF-947759A019B4}
+		{A4FDA7F1-08A7-493B-A9F8-1F1930B0E6AE} = {81A99C5C-0E7C-4C24-B8AC-E21AC13FEA47}
+		{C03AFAC2-E5B5-4D58-8F28-5DA282D87EA4} = {81A99C5C-0E7C-4C24-B8AC-E21AC13FEA47}
+		{27CB2F73-050A-41D3-9891-F362389FF09B} = {668B0DDD-B6B3-4823-A1C2-9A54A3A4BFC5}
+		{431C2F31-4728-4C4F-8C3D-7C788AB24316} = {668B0DDD-B6B3-4823-A1C2-9A54A3A4BFC5}
+		{BD9912DC-1362-4548-A439-58CC9F0750E3} = {668B0DDD-B6B3-4823-A1C2-9A54A3A4BFC5}
+		{A62B9D43-3333-4CEA-AD71-D7358D30C85F} = {668B0DDD-B6B3-4823-A1C2-9A54A3A4BFC5}
+		{51BD0D16-B28A-4E17-931D-5665367C9269} = {4A7C33D7-D62E-4DE1-89BE-27196B485BC1}
+		{B7A2AC83-BF21-4C32-927B-6C4F56D7F929} = {51BD0D16-B28A-4E17-931D-5665367C9269}
+		{518D8DC0-5369-4A5B-A609-E271102E02A4} = {D6B200B8-5353-4EDE-8A96-6D5C95ED0823}
+		{FA286088-D0F6-4FB5-B4A6-592ED9C313C0} = {518D8DC0-5369-4A5B-A609-E271102E02A4}
+		{B5B36887-864A-4B6F-AD64-7ABF357D09AF} = {FA286088-D0F6-4FB5-B4A6-592ED9C313C0}
+		{8C458FE5-6FAF-44D3-B208-52A2DE4A25F5} = {B5B36887-864A-4B6F-AD64-7ABF357D09AF}
+		{0B53C2FA-AE39-4D34-963C-B31F7E24603A} = {6149EE5E-6C0B-4DFB-9979-5A8386D82D6A}
+		{6B68FC32-F8EF-40BD-A119-8A055ABAA8F8} = {431C2F31-4728-4C4F-8C3D-7C788AB24316}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9322AD82-254A-4C65-8E98-A0DE794DC88C}

@@ -12,35 +12,35 @@ GO
 
 RAISERROR
 (
-	N'Creando el desencadenador [dbo].[IDBranchOffice]...',
+	N'Creando el desencadenador [dbo].[IDCostCenter]...',
 	0,
 	1
 )
 WITH NOWAIT;
 GO
 
-CREATE OR ALTER TRIGGER [dbo].[IDBranchOffice]
-ON [dbo].[BranchOffice]
+CREATE OR ALTER TRIGGER [dbo].[IDCostCenter]
+ON [dbo].[CostCenter]
 INSTEAD OF DELETE AS
 BEGIN
 	SET NOCOUNT ON;
 	IF [dbo].[CUDSecurity]
 	(
-		2, -- ID de la entidad BranchOffice
+		3, -- ID de la entidad CostCenter
 		'D'
 	) = 0
 	BEGIN
 		ROLLBACK TRANSACTION;
-		RAISERROR(51002, 16, 1, 'delete', 'BranchOffice');
+		RAISERROR(51002, 16, 1, 'delete', 'CostCenter');
 		RETURN;
 	END;
 	DELETE FROM
-		[dbo].[BranchOffice]
+		[dbo].[CostCenter]
 	WHERE
-		[id_broff] IN
+		[id_cosce] IN
 		(
 			SELECT
-				[d].[id_broff]
+				[d].[id_cosce]
 			FROM
 				[deleted] [d]
 		);
@@ -58,9 +58,9 @@ IF EXISTS
 			N'SCHEMA',
 			N'dbo',
 			N'TABLE',
-			N'BranchOffice',
+			N'CostCenter',
 			N'TRIGGER',
-			N'IDBranchOffice'
+			N'IDCostCenter'
 		) AS "f"
 )
 	BEGIN
@@ -70,9 +70,9 @@ IF EXISTS
 			@level0type = N'SCHEMA',
 			@level0name = N'dbo',
 			@level1type = N'TABLE',
-			@level1name = N'BranchOffice',
+			@level1name = N'CostCenter',
 			@level2type = N'TRIGGER',
-			@level2name = N'IDBranchOffice';
+			@level2name = N'IDCostCenter';
 	END;
 ELSE
 	BEGIN
@@ -82,8 +82,8 @@ ELSE
 			@level0type = N'SCHEMA',
 			@level0name = N'dbo',
 			@level1type = N'TABLE',
-			@level1name = N'BranchOffice',
+			@level1name = N'CostCenter',
 			@level2type = N'TRIGGER',
-			@level2name = N'IDBranchOffice';
+			@level2name = N'IDCostCenter';
 	END;
 GO
