@@ -1,0 +1,35 @@
+﻿USE [SERP];
+GO
+
+SET QUOTED_IDENTIFIER ON;
+SET ARITHABORT ON;
+SET NUMERIC_ROUNDABORT OFF;
+SET CONCAT_NULL_YIELDS_NULL ON;
+SET ANSI_NULLS ON;
+SET ANSI_PADDING ON;
+SET ANSI_WARNINGS ON;
+GO
+
+RAISERROR
+(
+	N'Creando el login [TestUser]...',
+	0,
+	1
+)
+WITH NOWAIT;
+GO
+
+IF NOT EXISTS
+(
+    SELECT
+		1
+    FROM
+		[sys].[server_principals]
+    WHERE
+		[name] = N'TestUser'
+)
+BEGIN
+	CREATE LOGIN [TestUser]
+	WITH PASSWORD = 'StrongPassword123!';
+END;
+GO

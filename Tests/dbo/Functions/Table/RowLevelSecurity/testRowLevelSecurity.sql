@@ -1,0 +1,23 @@
+﻿USE [SERP];
+GO
+
+SET QUOTED_IDENTIFIER ON;
+SET ARITHABORT ON;
+SET NUMERIC_ROUNDABORT OFF;
+SET CONCAT_NULL_YIELDS_NULL ON;
+SET ANSI_NULLS ON;
+SET ANSI_PADDING ON;
+SET ANSI_WARNINGS ON;
+GO
+
+RAISERROR
+(
+	N'Creando la clase para realizar las pruebas de la función [dbo].[RowLevelSecurity]...',
+	0,
+	1
+)
+WITH NOWAIT;
+GO
+
+EXECUTE [tSQLt].[NewTestClass] 'testRowLevelSecurity';
+GO
