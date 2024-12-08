@@ -30,3 +30,7 @@ GO
 ALTER ROLE [db_datawriter]
 ADD MEMBER [TestUser];
 GO
+
+GRANT EXECUTE ON [dbo].[GetUserPermissions]
+TO [TestUser];
+GO

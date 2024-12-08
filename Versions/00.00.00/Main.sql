@@ -2,6 +2,7 @@
 :r $(path)\Versions\00.00.00\Database.sql
 :r $(path)\sys\Views\messages\51001.sql
 :r $(path)\sys\Views\messages\51002.sql
+:r $(path)\sys\Views\messages\51003.sql
 :r $(path)\Security\Schemas\History.sql
 :r $(path)\scripts_para_crear_tablas\company.sql
 :r $(path)\scripts_para_crear_tablas\branch_office.sql
@@ -26,6 +27,7 @@
 :r $(path)\dbo\Triggers\IDCostCenter.sql
 :r $(path)\dbo\Triggers\IICostCenter.sql
 :r $(path)\dbo\Triggers\IUCostCenter.sql
+:r $(path)\dbo\Procedures\GetUserPermissions.sql
 :r $(path)\dbo\Data\Company.sql
 :r $(path)\dbo\Data\BranchOffice.sql
 :r $(path)\dbo\Data\CostCenter.sql

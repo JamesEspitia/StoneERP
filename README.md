@@ -32,7 +32,11 @@ StoneERP
 │   │   │   │   ...
 │   │   │   └
 │   │   │   ...
-│   │   └    
+│   │   └
+│   └───Stored Procedures
+│   │   │   GetUserPermissions.sql
+│   │   │   ...
+│   │   └
 │	└───Triggers
 │   │   │   IDBranchOffice.sql
 │   │   │   IIBranchOffice.sql
@@ -88,6 +92,7 @@ StoneERP
 │   │   └───messages
 │   │   │   │   51001.sql
 │   │   │   │   51002.sql
+│   │   │   │   51003.sql
 │   │   │   │   ...
 │   │   │   └
 │   │   │   ...
@@ -170,4 +175,5 @@ Para cada mejora debe abrir una rama nueva en el repositorio.
 18. Crear las pruebas automatizadas del desencadenador "dbo"."IDEntityCatalog"
 19. Crear las pruebas automatizadas del desencadenador "dbo"."IIEntityCatalog"
 20. Crear las pruebas automatizadas del desencadenador "dbo"."IUEntityCatalog"
-21. Evaluar qué otras tablas requieren validación de permisos de insersión, actualización y eliminación y crear los desencadenadores.
+21. Crear las pruebas automatizadas del procedimiento almacenado "dbo"."GetUserPermissions"
+22. Evaluar qué otras tablas requieren validación de permisos de insersión, actualización y eliminación y crear los desencadenadores.
