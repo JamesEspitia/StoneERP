@@ -1,4 +1,4 @@
-﻿:setvar path "D:\Users\James\Documents\Empleo\StoneERP\"
+﻿:setvar path "Unidad:\Ruta\Al\Repositorio\Local\StoneERP\"
 :r $(path)\Versions\00.00.00\Database.sql
 :r $(path)\sys\Views\messages\51001.sql
 :r $(path)\sys\Views\messages\51002.sql

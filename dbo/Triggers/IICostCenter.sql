@@ -34,58 +34,28 @@ BEGIN
 			RAISERROR(51002, 16, 1, 'insert', 'CostCenter');
 			RETURN;
 		END;
-	IF OBJECTPROPERTY(OBJECT_ID(N'[dbo].[CostCenter]'), 'TableHasIdentity') = 1
-		BEGIN
-			INSERT INTO [dbo].[CostCenter]
-			(
-				[id_cosce],
-				[company_id],
-				[cosce_parent_id],
-				[cosce_code],
-				[cosce_name],
-				[cosce_description],
-				[cosce_budget],
-				[cosce_level],
-				[cosce_active]
-			)
-			SELECT
-				[i].[id_cosce],
-				[i].[company_id],
-				[i].[cosce_parent_id],
-				[i].[cosce_code],
-				[i].[cosce_name],
-				[i].[cosce_description],
-				[i].[cosce_budget],
-				[i].[cosce_level],
-				[i].[cosce_active]
-			FROM
-				[inserted] [i];
-		END;
-	ELSE
-		BEGIN
-			INSERT INTO [dbo].[CostCenter]
-			(
-				[company_id],
-				[cosce_parent_id],
-				[cosce_code],
-				[cosce_name],
-				[cosce_description],
-				[cosce_budget],
-				[cosce_level],
-				[cosce_active]
-			)
-			SELECT
-				[i].[company_id],
-				[i].[cosce_parent_id],
-				[i].[cosce_code],
-				[i].[cosce_name],
-				[i].[cosce_description],
-				[i].[cosce_budget],
-				[i].[cosce_level],
-				[i].[cosce_active]
-			FROM
-				[inserted] [i];
-		END;
+		INSERT INTO [dbo].[CostCenter]
+		(
+			[company_id],
+			[cosce_parent_id],
+			[cosce_code],
+			[cosce_name],
+			[cosce_description],
+			[cosce_budget],
+			[cosce_level],
+			[cosce_active]
+		)
+		SELECT
+			[i].[company_id],
+			[i].[cosce_parent_id],
+			[i].[cosce_code],
+			[i].[cosce_name],
+			[i].[cosce_description],
+			[i].[cosce_budget],
+			[i].[cosce_level],
+			[i].[cosce_active]
+		FROM
+			[inserted] [i];
 END;
 GO
 

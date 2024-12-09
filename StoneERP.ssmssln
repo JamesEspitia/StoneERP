@@ -90,6 +90,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "messages", "messages", "{B7
 	ProjectSection(SolutionItems) = preProject
 		sys\Views\messages\51001.sql = sys\Views\messages\51001.sql
 		sys\Views\messages\51002.sql = sys\Views\messages\51002.sql
+		sys\Views\messages\51003.sql = sys\Views\messages\51003.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D6B200B8-5353-4EDE-8A96-6D5C95ED0823}"
@@ -120,13 +121,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dbo", "dbo", "{6B68FC32-F8E
 		Security\Policies\dbo\RowLevelSecurityCostCenter.sql = Security\Policies\dbo\RowLevelSecurityCostCenter.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Procedures", "Procedures", "{9E95A3D6-AC76-4E3F-ACD2-67DA619B0CCE}"
+	ProjectSection(SolutionItems) = preProject
+		dbo\Procedures\GetUserPermissions.sql = dbo\Procedures\GetUserPermissions.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{119F2D38-8B07-450C-A0F8-5F481C60CED2}.Default|Default.ActiveCfg = Default
-		{70FA476C-21CB-46E9-9942-79BF47425D0C}.Default|Default.ActiveCfg = Default
+		{2540D232-CE48-430F-92F9-139C9A04B122}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +155,7 @@ Global
 		{8C458FE5-6FAF-44D3-B208-52A2DE4A25F5} = {B5B36887-864A-4B6F-AD64-7ABF357D09AF}
 		{0B53C2FA-AE39-4D34-963C-B31F7E24603A} = {6149EE5E-6C0B-4DFB-9979-5A8386D82D6A}
 		{6B68FC32-F8EF-40BD-A119-8A055ABAA8F8} = {431C2F31-4728-4C4F-8C3D-7C788AB24316}
+		{9E95A3D6-AC76-4E3F-ACD2-67DA619B0CCE} = {FF26E177-F088-49F2-8FEF-947759A019B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9322AD82-254A-4C65-8E98-A0DE794DC88C}

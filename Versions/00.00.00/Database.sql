@@ -24,7 +24,7 @@ CONTAINMENT = NONE
 ON PRIMARY
 (
     NAME = N'SERP',
-    FILENAME = N'D:\Users\James\Documents\Microsoft SQL Server\MSSQL16.MSSQLSERVER2022\MSSQL\DATA\SERP.mdf',
+    FILENAME = N'Unidad:\Ruta\Al\Archivo\SERP.mdf',
     SIZE = 8192KB,
     MAXSIZE = UNLIMITED,
     FILEGROWTH = 65536KB
@@ -32,7 +32,7 @@ ON PRIMARY
 LOG ON
 (
     NAME = N'SERP_log',
-    FILENAME = N'D:\Users\James\Documents\Microsoft SQL Server\MSSQL16.MSSQLSERVER2022\MSSQL\Log\SERP.ldf',
+    FILENAME = N'Unidad:\Ruta\Al\Archivo\SERP.ldf',
     SIZE = 8192KB,
     MAXSIZE = 2048GB,
     FILEGROWTH = 65536KB

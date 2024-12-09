@@ -19,6 +19,12 @@ RAISERROR
 WITH NOWAIT;
 GO
 
+DISABLE TRIGGER
+	[dbo].[IIBranchOffice]
+ON
+	[dbo].[BranchOffice];
+GO
+
 SET IDENTITY_INSERT [dbo].[BranchOffice] ON;
 GO
 
@@ -48,4 +54,10 @@ DBCC CHECKIDENT ('[dbo].[BranchOffice]', RESEED, 5);
 GO
 
 SET IDENTITY_INSERT [dbo].[BranchOffice] OFF;
+GO
+
+ENABLE TRIGGER
+	[dbo].[IIBranchOffice]
+ON
+	[dbo].[BranchOffice];
 GO

@@ -19,6 +19,12 @@ RAISERROR
 WITH NOWAIT;
 GO
 
+DISABLE TRIGGER
+	[dbo].[IICostCenter]
+ON
+	[dbo].[CostCenter];
+GO
+
 SET IDENTITY_INSERT [dbo].[CostCenter] ON;
 GO
 
@@ -46,4 +52,10 @@ DBCC CHECKIDENT ('[dbo].[CostCenter]', RESEED, 5);
 GO
 
 SET IDENTITY_INSERT [dbo].[CostCenter] OFF;
+GO
+
+ENABLE TRIGGER
+	[dbo].[IICostCenter]
+ON
+	[dbo].[CostCenter];
 GO

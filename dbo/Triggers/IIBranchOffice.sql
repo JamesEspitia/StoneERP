@@ -34,66 +34,32 @@ BEGIN
 			RAISERROR(51002, 16, 1, 'insert', 'BranchOffice');
 			RETURN;
 		END;
-	IF OBJECTPROPERTY(OBJECT_ID(N'[dbo].[BranchOffice]'), 'TableHasIdentity') = 1
-		BEGIN
-			INSERT INTO [dbo].[BranchOffice]
-			(
-				[id_broff],
-				[company_id],
-				[broff_name],
-				[broff_code],
-				[broff_address],
-				[broff_city],
-				[broff_state],
-				[broff_country],
-				[broff_phone],
-				[broff_email],
-				[broff_active]
-			)
-			SELECT
-				[i].[id_broff],
-				[i].[company_id],
-				[i].[broff_name],
-				[i].[broff_code],
-				[i].[broff_address],
-				[i].[broff_city],
-				[i].[broff_state],
-				[i].[broff_country],
-				[i].[broff_phone],
-				[i].[broff_email],
-				[i].[broff_active]
-			FROM
-				[inserted] [i];
-		END;
-	ELSE
-		BEGIN
-			INSERT INTO [dbo].[BranchOffice]
-			(
-				[company_id],
-				[broff_name],
-				[broff_code],
-				[broff_address],
-				[broff_city],
-				[broff_state],
-				[broff_country],
-				[broff_phone],
-				[broff_email],
-				[broff_active]
-			)
-			SELECT
-				[i].[company_id],
-				[i].[broff_name],
-				[i].[broff_code],
-				[i].[broff_address],
-				[i].[broff_city],
-				[i].[broff_state],
-				[i].[broff_country],
-				[i].[broff_phone],
-				[i].[broff_email],
-				[i].[broff_active]
-			FROM
-				[inserted] [i];
-		END;
+		INSERT INTO [dbo].[BranchOffice]
+		(
+			[company_id],
+			[broff_name],
+			[broff_code],
+			[broff_address],
+			[broff_city],
+			[broff_state],
+			[broff_country],
+			[broff_phone],
+			[broff_email],
+			[broff_active]
+		)
+		SELECT
+			[i].[company_id],
+			[i].[broff_name],
+			[i].[broff_code],
+			[i].[broff_address],
+			[i].[broff_city],
+			[i].[broff_state],
+			[i].[broff_country],
+			[i].[broff_phone],
+			[i].[broff_email],
+			[i].[broff_active]
+		FROM
+			[inserted] [i];
 END;
 GO
 

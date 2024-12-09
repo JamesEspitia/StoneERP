@@ -62,7 +62,7 @@ BEGIN
 									[pu].[peusr_include] = 1 AND
 									(
 										(
-											@operation = 'I' AND
+											@operation = 'C' AND
 											[p].[can_create] = 1
 										) OR
 										(
@@ -71,14 +71,23 @@ BEGIN
 										) OR
 										(
 											@operation = 'D' AND
-											[p].[can_delete] = 1)
+											[p].[can_delete] = 1
+										) OR
+										(
+											@operation = 'I' AND
+											[p].[can_import] = 1
+										) OR
+										(
+											@operation = 'E' AND
+											[p].[can_export] = 1
+										)
 									)
 								) OR
 								(
 									[pu].[peusr_include] = 0 AND
 									(
 										(
-											@operation = 'I' AND
+											@operation = 'C' AND
 											[p].[can_create] = 0
 										) AND
 										(
@@ -88,6 +97,14 @@ BEGIN
 										(
 											@operation = 'D' AND
 											[p].[can_delete] = 0
+										) OR
+										(
+											@operation = 'I' AND
+											[p].[can_import] = 1
+										) OR
+										(
+											@operation = 'E' AND
+											[p].[can_export] = 1
 										)
 									)
 								)
@@ -112,7 +129,7 @@ BEGIN
 									[pr].[perol_include] = 1 AND
 									(
 										(
-											@operation = 'I' AND
+											@operation = 'C' AND
 											[p].[can_create] = 1
 										) OR
 										(
@@ -122,6 +139,14 @@ BEGIN
 										(
 											@operation = 'D' AND
 											[p].[can_delete] = 1
+										) OR
+										(
+											@operation = 'I' AND
+											[p].[can_import] = 1
+										) OR
+										(
+											@operation = 'E' AND
+											[p].[can_export] = 1
 										)
 									)
 								) OR
@@ -129,7 +154,7 @@ BEGIN
 									[pr].[perol_include] = 0 AND
 									(
 										(
-											@operation = 'I' AND
+											@operation = 'C' AND
 											[p].[can_create] = 0
 										) AND
 										(
@@ -139,6 +164,14 @@ BEGIN
 										(
 											@operation = 'D' AND
 											[p].[can_delete] = 0
+										) OR
+										(
+											@operation = 'I' AND
+											[p].[can_import] = 1
+										) OR
+										(
+											@operation = 'E' AND
+											[p].[can_export] = 1
 										)
 									)
 								)
@@ -253,7 +286,7 @@ IF EXISTS
 	BEGIN
 		EXECUTE "sys"."sp_updateextendedproperty"
 			@name = N'MS_Description',
-			@value = N'Operación CRUD a validar: I (INSERT), U (UPDATE), D (DELETE).',
+			@value = N'Operación CRUD a validar: C (INSERT), U (UPDATE), D (DELETE), I (IMPORT), E (EXPORT).',
 			@level0type = N'SCHEMA',
 			@level0name = N'dbo',
 			@level1type = N'FUNCTION',
@@ -265,7 +298,7 @@ ELSE
 	BEGIN
 		EXECUTE "sys"."sp_addextendedproperty"
 			@name = N'MS_Description',
-			@value = N'Operación CRUD a validar: I (INSERT), U (UPDATE), D (DELETE).',
+			@value = N'Operación CRUD a validar: C (INSERT), U (UPDATE), D (DELETE), I (IMPORT), E (EXPORT).',
 			@level0type = N'SCHEMA',
 			@level0name = N'dbo',
 			@level1type = N'FUNCTION',

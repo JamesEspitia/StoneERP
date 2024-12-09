@@ -30,6 +30,8 @@ BEGIN
 	DECLARE @can_create BIT;
 	DECLARE @can_delete BIT;
 	DECLARE @can_update BIT;
+	DECLARE @can_import BIT;
+	DECLARE @can_export BIT;
 	DECLARE @primary_key NVARCHAR(128);
 	DECLARE @schema_name NVARCHAR(128);
 	DECLARE @sql NVARCHAR(MAX);
@@ -69,11 +71,15 @@ BEGIN
 		[can_create] BIT,
 		[can_read] BIT,
 		[can_update] BIT,
-		[can_delete] BIT
+		[can_delete] BIT,
+		[can_import] BIT,
+		[can_export] BIT
 	);
-	SET @can_create = [dbo].[CUDSecurity](@entity_id, 'I');
+	SET @can_create = [dbo].[CUDSecurity](@entity_id, 'C');
 	SET @can_update = [dbo].[CUDSecurity](@entity_id, 'U');
 	SET @can_delete = [dbo].[CUDSecurity](@entity_id, 'D');
+	SET @can_import = [dbo].[CUDSecurity](@entity_id, 'I');
+	SET @can_export = [dbo].[CUDSecurity](@entity_id, 'E');
 	INSERT INTO #UserPermissions
 	(
 		[permission_level],
@@ -81,7 +87,9 @@ BEGIN
 		[can_create],
 		[can_read],
 		[can_update],
-		[can_delete]
+		[can_delete],
+		[can_import],
+		[can_export]
 	)
 	VALUES
 	(
@@ -90,7 +98,9 @@ BEGIN
 		@can_create,
 		NULL,
 		@can_update,
-		@can_delete
+		@can_delete,
+		@can_import,
+		@can_export
 	);
 	SET @sql = N'
 		INSERT INTO #UserPermissions
@@ -100,13 +110,17 @@ BEGIN
 			[can_create],
 			[can_read],
 			[can_update],
-			[can_delete]
+			[can_delete],
+			[can_import],
+			[can_export]
 		)
 		SELECT
 			''Record'',
 			[t].[' + @primary_key + N'],
 			NULL,
 			1,
+			NULL,
+			NULL,
 			NULL,
 			NULL
 		FROM
@@ -129,7 +143,9 @@ BEGIN
 		[up].[can_create],
 		[up].[can_read],
 		[up].[can_update],
-		[up].[can_delete]
+		[up].[can_delete],
+		[up].[can_import],
+		[up].[can_export]
 	FROM
 		#UserPermissions [up];
 	DROP TABLE #UserPermissions;
